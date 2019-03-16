@@ -14,8 +14,8 @@ attr_accessor :id, :name, :type, :db
 
   def self.find(id, db)
     new_pokemon_id = db.execute("SELECT id FROM pokemon WHERE id = id;")
-    
-    
+
+
   end
 
 end
