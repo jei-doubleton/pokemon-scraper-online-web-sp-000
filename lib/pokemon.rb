@@ -25,6 +25,6 @@ class Pokemon
   def alter_hp(hp, db)
     binding.pry
     db.execute( "UPDATE pokemon SET hp = ? WHERE id = ?", [hp, self.id])
-    self.hp = :key => "value", 
+    self.hp = hp
   end
 end
