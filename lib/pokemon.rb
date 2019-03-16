@@ -21,6 +21,6 @@ class Pokemon
     Pokemon.new(id:id, name:new_pokemon_name[0][0], type:new_pokemon_type[0][0], db:db)
   end
 
-  
+
 
 end
