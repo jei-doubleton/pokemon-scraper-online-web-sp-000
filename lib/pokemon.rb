@@ -20,7 +20,7 @@ class Pokemon
 
     new_pokemon = Pokemon.new(id:id, name:new_pokemon_name[0][0], type:new_pokemon_type[0][0], db:db)
 
-    new_pokemon_hp = db.execute("SELECT hp FROM pokemon WHERE id = id;")
+    new_pokemon.hp = db.execute("SELECT hp FROM pokemon WHERE id = id;")
   end
 
   def alter_hp(hp, db)
