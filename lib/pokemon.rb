@@ -22,6 +22,6 @@ class Pokemon
   end
 
   def alter_hp(hp, db)
-    
+    db.execute( "UDPATE pokemon SET hp = ? WHERE id = ?", [hp, self.id])
   end
 end
