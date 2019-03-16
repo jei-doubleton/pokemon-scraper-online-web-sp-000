@@ -10,8 +10,6 @@ attr_accessor :id, :name, :type, :db
   end
 
   def self.save
-    # ins = db.prepare('insert into catalog (column_name) values (?)')
-    # string.each { |s| ins.execute(s) }
     @db.execute( "INSERT INTO pokemon (name, type) ) VALUES ( ?, ? )", [@name, @type])
   end
 
