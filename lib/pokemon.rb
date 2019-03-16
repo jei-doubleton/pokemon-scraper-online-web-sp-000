@@ -1,8 +1,5 @@
 class Pokemon
 attr_accessor :id, :name, :type, :db
-# Pokemon.save(pk_name, pk_type, db)
-
-
 
   def initialize(id:, name:, type:, db:)
     @id = id
@@ -13,6 +10,10 @@ attr_accessor :id, :name, :type, :db
 
   def self.save(name, type, db)
     db.execute( "INSERT INTO pokemon (name, type) VALUES ( ?, ? )", [name, type])
+  end
+
+  def self.find(id, db)
+    db.execute("SELECT * FROM pokemon WHERE id = id)
   end
 
 end
